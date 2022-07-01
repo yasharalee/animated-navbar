@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+
+.si {
+  position: relative;
+  background-color: rgb(21, 21, 80);
+  height: 75px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul{
+
+  width: 350px;
+  position: relative;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul li {
+  position: relative;
+  color: white;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.unstyled {
+  list-style: none;
+}
+
+
+
+
+.icon{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+  text-align: center;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 2em;
+  text-align: center;
+  transition: 0.5s;
+  color: white;
 }
+
+ul li.active a .icon{
+  transform: translateY(43px);
+}
+
+ul li a .text{
+  position: absolute;
+  color: white;
+  font-weight: 400;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+ul li.active a .text{
+
+  opacity: 1;
+  transform: translateY(-10px);
+
+}
+
+.indicator{
+
+  position: absolute;
+  top: 65%;
+  left: 15%;
+  width: 70px;
+  height: 70px;
+  background: green;
+  border-radius: 50%;
+  border: 6px solid white;
+  transition: 0.5s;
+
+}
+
+.indicator::before {
+
+  content: '';
+  position: absolute;
+  bottom: 59%;
+  left: -20.5px;
+  width: 20px;
+  height: 20px;
+  background:transparent;
+  border-bottom-right-radius: 20px;
+  box-shadow: 1px 10px 0 0 white;
+
+}
+
+.indicator::after {
+
+  content: '';
+  position: absolute;
+  bottom: 59%;
+  right: -20.5px;
+  width: 20px;
+  height: 20px;
+  background:transparent;
+  border-bottom-left-radius: 20px;
+  box-shadow: -1px 10px 0 0 white;
+
+}
+
+ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(70px * 0))
+}
+
+ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1))
+}
+
+ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2))
+}
+
+ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
