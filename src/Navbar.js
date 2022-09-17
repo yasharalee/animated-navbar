@@ -85,25 +85,3 @@ class Navbar extends Component {
  
 export default Navbar;
 
-// if (this.state.active === "list unstyled active") {
-        //     this.setState(() => ({
-        //         active: "list unstyled"
-        //     }))
-
-        // } else {
-        //     this.setState(() => ({
-        //         active: "list unstyled active"
-        //     }))
-        // }
-        // console.log(this.state.active);
-        //----------------------------------------------
-
-
-            
-        //     this.setState(() => ({
-        //     idThatClicked: item.id
-        //  }));
-        //const listId = document.getElementById(this.state.idThatClicked);
-         //console.log(listId);
-        //listId.classList.add(this.state.idThatClicked);
-
