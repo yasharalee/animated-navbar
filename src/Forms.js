@@ -28,7 +28,6 @@ class Forms extends Component {
     
     const key = e.currentTarget.name  ;
   const value = e.currentTarget.value;
-  console.log(value);
 
   this.setState( () => ({
     [key]: value
@@ -40,7 +39,7 @@ class Forms extends Component {
     return (
       <>
         <form>
-          <div className=" col col-sm-6 col-md-6 border fit">
+          <div className=" col col-sm-5 col-md-5 border fit">
             <div className="row">
               <div className=" col-9 col-sm-9 col-md-9 col-lg-9 borders">
                 <input
